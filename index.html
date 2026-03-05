@@ -219,5 +219,75 @@
         </p>
       </footer>
     </main>
+
+    <div id="image-lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" class="lightbox-image" alt="Expanded publication figure">
+        <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <script>
+      (function () {
+        var lightbox = document.getElementById("image-lightbox");
+        var lightboxImage = document.getElementById("lightbox-image");
+        var lightboxCaption = document.getElementById("lightbox-caption");
+        var closeButton = document.getElementById("lightbox-close");
+        var lastFocusedElement = null;
+
+        function openLightbox(src, altText) {
+          lastFocusedElement = document.activeElement;
+          lightboxImage.src = src;
+          lightboxImage.alt = altText || "Expanded publication figure";
+          lightboxCaption.textContent = altText || "";
+          lightbox.classList.add("open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+          closeButton.focus();
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("open");
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("lightbox-open");
+          lightboxImage.src = "";
+          if (lastFocusedElement) {
+            lastFocusedElement.focus();
+          }
+        }
+
+        document.querySelectorAll(".publication .pub-image").forEach(function (img) {
+          img.setAttribute("tabindex", "0");
+          img.setAttribute("role", "button");
+          img.setAttribute("aria-label", "Click to enlarge figure");
+
+          img.addEventListener("click", function () {
+            openLightbox(img.currentSrc || img.src, img.alt);
+          });
+
+          img.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openLightbox(img.currentSrc || img.src, img.alt);
+            }
+          });
+        });
+
+        closeButton.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (event) {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && lightbox.classList.contains("open")) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
