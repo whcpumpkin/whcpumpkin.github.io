@@ -22,10 +22,12 @@
                 <p class="name" style="text-align: center;">
                   Hongcheng Wang
                 </p>
-                <p>I am a third-year CS PhD candidate at Peking University. My supervisor is Prof. <a href=https://zsdonghao.github.io>Hao Dong</a>. My interests include computer vision and robotics.
+                <p>I am a fourth-year CS PhD candidate at Peking University. My supervisor is Prof. <a href=https://zsdonghao.github.io>Hao Dong</a>. My current research interests are organized into two parts:</p>
+                <p>
+                  (1) chain-of-thought reasoning: I study reinforcement-learning post-training for large models, especially how to stably train &lt;think&gt; to better guide &lt;answer&gt;.
                 </p>
                 <p>
-                  I graduated from the School of Electronics Engineering and Computer Science of Peking University with a Bachelor's degree. As an undergraduate, I majored in Intelligence Science and Technology and minored in Psychology.
+                  (2) Human-centered robot decision making: I focus on aligning human intentions, motivations, and demands with robust embodied decision making and robot actions.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:whc.1999@pku.edu.cn">Email</a> &nbsp;/&nbsp;
@@ -41,17 +43,114 @@
               </td>
             </tr>
           </tbody></table>
+          <table width="100%" align="center" border="0" cellspacing="20" cellpadding="00"><tbody>
+            <tr>
+              <td>
+                <h2>Blog</h2>
+              </td>
+              
+            </tr>
+            </tbody>
+          </table>
+          <table width="100%" align="center" border="0" cellspacing="20" cellpadding="00"><tbody>
+            <tr>
+              <td>
+                <p><a href="https://zhuanlan.zhihu.com/p/21297297778">Deepseek 技术积累解读：R1模型之前都经历了什么？</a></p>
+              </td>
+              
+            </tr>
+          </tbody>
+          </table>
+
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in computer vision, robotic, large language model and psychology. I hope to achieve a psychologically meaningful alignment between human intentions, motivations, and demands and robot actions, enabling robots to better serve humans.
+                  My current work has two main directions: (1) chain-of-thought reasoning for large models, and (2) human-centered robot decision making in embodied settings.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="camp_stop()" onmouseover="camp_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  
+                  <img src='images/ICRA-2026-UcON.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function camp_start() {
+                    document.getElementById('camp_image').style.opacity = "1";
+                  }
+        
+                  function camp_stop() {
+                    document.getElementById('camp_image').style.opacity = "0";
+                  }
+                  camp_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2602.06459">
+                  <span class="papertitle">User-Centric Object Navigation: A Benchmark with Integrated User Habits for Personalized Embodied Object Search</span>
+                </a>
+                <br>
+                <a href="https://whcpumpkin.github.io/"><strong>Hongcheng Wang</strong></a>,
+                <a>Jinyu Zhu</a>,
+                <a href="https://zsdonghao.github.io/">Hao Dong</a>
+                <br>
+                ICRA, 2026
+                <br>
+                <a href="https://arxiv.org/abs/2602.06459">Paper</a>
+                /
+                <a href="https://github.com/whcpumpkin/User-Centric-Object-Navigation">Code</a>
+        
+                <p></p>
+                <p>
+                We introduce User-centric Object Navigation (UcON), a benchmark with integrated user habits for personalized embodied object search and habit-conditioned planning.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="camp_stop()" onmouseover="camp_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  
+                  <img src='images/arXiv-2025-GRPO-MA.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function camp_start() {
+                    document.getElementById('camp_image').style.opacity = "1";
+                  }
+        
+                  function camp_stop() {
+                    document.getElementById('camp_image').style.opacity = "0";
+                  }
+                  camp_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2509.24494">
+                  <span class="papertitle">Why Tree-Style Branching Matters for Thought Advantage Estimation in GRPO</span>
+                </a>
+                <br>
+                <a href="https://whcpumpkin.github.io/"><strong>Hongcheng Wang</strong></a>,
+                <a>Yinuo Huang</a>,
+                <a>Sukai Wang</a>,
+                <a>Guanghui Ren</a>,
+                <a href="https://zsdonghao.github.io/">Hao Dong</a>
+                <br>
+                arXiv preprint, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2509.24494">Paper</a>
+        
+                <p></p>
+                <p>
+                We analyze variance in thought-level advantage estimation for GRPO and show why answer-level branching is key for stable and efficient reasoning optimization.
+                </p>
+              </td>
+            </tr>
 
             <tr onmouseout="camp_stop()" onmouseover="camp_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -219,10 +318,13 @@
           <table width="100%" align="center" border="0" cellspacing="20" cellpadding="00"><tbody>
             <tr>
               <td>
-                <p>ICRA 2023, Reviewer</p>
-                <p>IROS 2024, Reviewer</p>
-                <p>NeurIPS 2024, Reviewer</p>
-                <p>ICLR 2025, Reviewer</p>
+                <p>ICRA (2023), Reviewer</p>
+                <p>IROS (2024), Reviewer</p>
+                <p>NeurIPS (2024, 2025), Reviewer</p>
+                <p>ACM MM (2025), Reviewer</p>
+                <p>ICLR (2025, 2026), Reviewer</p>
+                <p>ICML (2025, 2026), Reviewer</p>
+                <p>RA-L (2026), Reviewer</p>
               </td>
               
             </tr>
@@ -241,14 +343,13 @@
           <table width="100%" align="center" border="0" cellspacing="20" cellpadding="00"><tbody>
             <tr>
               <td>
-                <p>Fundamentals of artificial intelligence, Spring, 2023</p>
-                <p>Fundamentals of artificial intelligence, Spring, 2024</p>
+                <p>Fundamentals of artificial intelligence, Spring (2023, 2024, 2025, 2026)</p>
+                <p>Introduction to Computation (A), Fall, 2025</p>
               </td>
               
             </tr>
           </tbody>
           </table>
-
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
