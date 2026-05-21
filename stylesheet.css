@@ -82,6 +82,16 @@ a:focus {
   padding-left: 20px;
 }
 
+.job-note {
+  margin: 14px 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: #24385f;
+  font-weight: 600;
+}
+
 .focus-list li {
   margin: 6px 0;
 }
